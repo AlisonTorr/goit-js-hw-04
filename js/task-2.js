@@ -9,8 +9,9 @@ const inventory = {
   },
   remove(itemName) {
     console.log(`Removing ${itemName} from inventory`);
-
-    this.items = this.items.filter((item) => item !== itemName);
+    for (const item of items) {
+      this.items = this.items.filter((item) => item !== itemName);
+    }
   },
 };
 
